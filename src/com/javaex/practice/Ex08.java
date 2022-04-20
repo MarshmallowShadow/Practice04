@@ -10,10 +10,20 @@ public class Ex08 {
 		
 		for(int i=0; i<lotto.length; i++) {
 			lotto[i] = (int)(Math.random()*45) + 1;
+			for(int j=0; j<i; j++) {
+				while(lotto[i] == lotto[j]) {
+					lotto[i] = (int)(Math.random()*45) + 1;
+				}
+			}
 		}
 		
 		for(int i=0; i<card.length; i++) {
 			card[i] = (int)(Math.random()*60) + 1; //rigged
+			for(int j=0; j<i; j++) {
+				while(card[i] == card[j]) {
+					card[i] = (int)(Math.random()*45) + 1;
+				}
+			}
 		}
 		
 		System.out.println("당첨 번호: ");
